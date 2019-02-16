@@ -1,11 +1,23 @@
 public class BubbleSort implements SortingAlgorithm{
-
+    /*
+     * swap()
+     * swaps 2 variables in an array
+     */
     private static void swap(int[] a, int i, int j){
         int temp;
         temp = a[i];
         a[i] = a[j];
         a[j] = temp;
     }
+
+    /*
+    * bubble sort()
+    * Sorts values least to greatest by swapping values next
+    * to each other.  When iterating through the array, larger
+    * numbers at the end are sorted first with each pass so that
+    * the inner loop does not need to iterate through the entire
+    * list every time.
+     */
     @Override
     public void sort(int[] a) {
         boolean swapped = true;
